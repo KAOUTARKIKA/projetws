@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Nom -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom :"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <EditText
+            android:id="@+id/nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Entrez le nom"
+            android:layout_marginBottom="16dp"
+            android:textColor="#333333"
+            android:padding="12dp"/>
+
+        <!-- Prénom -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prénom :"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <EditText
+            android:id="@+id/prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Entrez le prénom"
+            android:layout_marginBottom="16dp"
+            android:textColor="#333333"
+            android:padding="12dp"/>
+
+        <!-- Ville -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ville :"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <Spinner
+            android:id="@+id/ville"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/villes"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Sexe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexe :"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Homme"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Femme"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+        </RadioGroup>
+
+        <!-- Date de naissance -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date de naissance :"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <Button
+            android:id="@+id/dateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sélectionner une date"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:onClick="openDatePicker"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Photo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Photo :"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <Button
+            android:id="@+id/selectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sélectionner une image"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:contentDescription="Image sélectionnée"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/user"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- Bouton Ajouter -->
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter l'étudiant"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</ScrollView>

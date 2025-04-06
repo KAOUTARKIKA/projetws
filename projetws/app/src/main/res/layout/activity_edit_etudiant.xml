@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nom -->
+        <EditText
+            android:id="@+id/et_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:textSize="16sp"/>
+
+        <!-- Prénom -->
+        <EditText
+            android:id="@+id/et_prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prénom"
+            android:inputType="textPersonName"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:textSize="16sp"/>
+
+        <!-- Ville -->
+        <Spinner
+            android:id="@+id/spinner_ville"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Sexe -->
+        <RadioGroup
+            android:id="@+id/radio_group_sexe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_homme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Homme"
+                android:textColor="#333333"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_femme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Femme"
+                android:textColor="#333333"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+        <!-- Date de naissance -->
+        <Button
+            android:id="@+id/btn_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date de naissance"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"/>
+
+        <!-- Photo -->
+        <Button
+            android:id="@+id/btn_select_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sélectionner une image"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/img_etudiant"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="24dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Image de l'étudiant"/>
+
+        <!-- Bouton Enregistrer -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enregistrer"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>
